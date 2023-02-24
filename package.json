@@ -1,0 +1,19 @@
+{
+  "name": "lazyshop",
+  "version": "1.0.0",
+  "description": "E-commerce API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Folawewo/lazyshop.git"
+  },
+  "author": "Folawewo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Folawewo/lazyshop/issues"
+  },
+  "homepage": "https://github.com/Folawewo/lazyshop#readme"
+}
