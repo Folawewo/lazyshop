@@ -4,7 +4,8 @@
   "description": "E-commerce API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Folawewo/lazyshop/issues"
   },
-  "homepage": "https://github.com/Folawewo/lazyshop#readme"
+  "homepage": "https://github.com/Folawewo/lazyshop#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0"
+  }
 }
