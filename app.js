@@ -32,4 +32,13 @@ app.post('/cart/add', async (req, res) => {
   res.json({ message: 'Product added to cart' });
 });
 
+app.get('/cart', async (req, res) => {
+    const order = await Order.findOne().populate('products');
+
+    if(!order) {
+        return res.json({products: []});
+    }
+    res.json({products: order.products})
+})
+
 module.exports = app;
