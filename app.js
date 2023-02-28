@@ -33,12 +33,24 @@ app.post('/cart/add', async (req, res) => {
 });
 
 app.get('/cart', async (req, res) => {
-    const order = await Order.findOne().populate('products');
+  const order = await Order.findOne().populate('products');
 
-    if(!order) {
-        return res.json({products: []});
-    }
-    res.json({products: order.products})
-})
+  if (!order) {
+    return res.json({ products: [] });
+  }
+  res.json({ products: order.products });
+});
+
+app.post('/checkout', async (req, res) => {
+  const order = await Order.findOne();
+
+  if (!order) {
+    return res.status(404).json({ message: 'No items in cart' });
+  }
+
+  await order.remove();
+
+  res.json({ message: 'Order placed' });
+});
 
 module.exports = app;
